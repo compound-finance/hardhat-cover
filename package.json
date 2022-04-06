@@ -1,0 +1,21 @@
+{
+  "name": "@compound-finance/hardhat-cover",
+  "version": "1.0.0",
+  "description": "Hardhat plugin for non-invasive coverage",
+  "author": "Jared Flatow <jared@compound.finance>",
+  "license": "MIT",
+  "main": "dist/plugin.js",
+  "scripts": {
+    "build": "tsc --build .",
+    "postinstall": "npm run build",
+    "test": "npm run build && mocha \"test/**/*.js\""
+  },
+  "devDependencies": {
+    "@types/mocha": "^9",
+    "mocha": "^9",
+    "typescript": "^4"
+  },
+  "peerDependencies": {
+    "hardhat": "^2"
+  }
+}
