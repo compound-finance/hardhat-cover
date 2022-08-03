@@ -126,7 +126,7 @@ export class Sources {
         for (let i = 0; i < this.unique; i++) {
           const maybePath = `${src.path}:${i}`;
           const maybeExisting = p2cs[maybePath];
-          if (maybeExisting.input.content == src.input.content) {
+          if (maybeExisting && maybeExisting.input.content == src.input.content) {
             path = maybePath;
             break;
           }

@@ -165,6 +165,7 @@ export class Coverage {
     for (const path in report) {
       // don't include generated sources which won't exist
       if (path.startsWith('#')) continue;
+      if (path.includes(':')) continue;
 
       // skip lines which have no significant features
       const syntax = this.pathToSyntax[path];
@@ -410,6 +411,7 @@ export class Coverage {
           break;
 
         case 'Break':
+        case 'Continue':
         case 'EmitStatement':
         case 'Identifier':
         case 'NewExpression':
