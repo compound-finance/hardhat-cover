@@ -360,7 +360,7 @@ export class Coverage {
           break;
 
         case 'IndexAccess':
-          kids = [ast.baseExpression, ast.indexExpression];
+          kids = [ast.baseExpression, ast.indexExpression].filter(_ => _);
           insertStatement(ast);
           break;
 
